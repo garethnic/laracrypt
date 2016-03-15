@@ -8,9 +8,9 @@ A Laravel package to handle database encryption. In the current state of this pr
 
 ## Install
 
-Via Composer
-
 Make sure you have [libsodium](https://download.libsodium.org/doc/installation/index.html) installed.
+
+Via Composer
 
 Add the following to your `composer.json` file:
 
@@ -74,6 +74,7 @@ public function getBodyAttribute($value)
 * Add configuration options
 * Add support for asymmetric encryption
 * Clean up code
+* Write tests
 
 ## Change log
 

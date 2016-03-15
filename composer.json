@@ -19,7 +19,7 @@
     ],
     "require": {
         "illuminate/support": "~5.1",
-        "php" : "~5.5|~7.0",
+        "php" : "~7.0",
         "paragonie/halite": "^1.5"
     },
     "require-dev": {
