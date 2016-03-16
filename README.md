@@ -21,7 +21,7 @@ Add the following to your `composer.json` file:
 Add the garethnic\ServiceProvider to your config/app.php providers array:
 
 ``` php
-garethnic\Repo\LaraCryptServiceProvider::class,
+garethnic\laracrypt\LaraCryptServiceProvider::class,
 ```
 
 Then do:
