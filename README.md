@@ -24,7 +24,17 @@ Add the garethnic\ServiceProvider to your config/app.php providers array:
 garethnic\Repo\LaraCryptServiceProvider::class,
 ```
 
-Then create the following directory `storage/keys`.
+Then do:
+
+``` bash
+$ php artisan vendor:publish
+```
+
+To copy the config file over. In this file you can specify where to store and load your key from.
+
+``` php
+'path' => storage_path('keys/encryption.key')
+```
 
 **For your database schema make sure the encrypted columns are of type `BLOB`.**
 
