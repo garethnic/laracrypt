@@ -30,6 +30,14 @@ Then create the following directory `storage/keys`.
 
 ## Usage
 
+You will first need to create your key:
+
+`LaraCrypt::generateKey()`
+
+This will generate a key and save it in `storage/keys`.
+
+In the future more options will be added to make key storage more flexible.
+
 There are multiple ways to go about encrypting/decrypting:
 
 `AppServiceProvider`
