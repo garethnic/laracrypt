@@ -13,7 +13,9 @@ class LaraCryptServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $this->publishes([
+           __DIR__.'/config/laracrypt.php' => config_path('/laracrypt.php')
+        ]);
     }
 
     /**

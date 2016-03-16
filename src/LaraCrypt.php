@@ -15,7 +15,7 @@ class LaraCrypt
     {
         $enc_key = KeyFactory::generateEncryptionKey();
 
-        KeyFactory::save($enc_key, storage_path('keys/enc.key'));
+        KeyFactory::save($enc_key, config('laracrypt.path'));
     }
 
     /**
@@ -26,7 +26,7 @@ class LaraCrypt
      */
     public static function encrypt($field)
     {
-        $key = KeyFactory::loadEncryptionKey(storage_path('keys/enc.txt'));
+        $key = KeyFactory::loadEncryptionKey(config('laracrypt.path'));
 
         return Crypto::encrypt($field, $key);
     }
@@ -39,7 +39,7 @@ class LaraCrypt
      */
     public static function decrypt($text)
     {
-        $key = KeyFactory::loadEncryptionKey(storage_path('keys/enc.txt'));
+        $key = KeyFactory::loadEncryptionKey(config('laracrypt.path'));
 
         return Crypto::decrypt($text, $key);
     }
