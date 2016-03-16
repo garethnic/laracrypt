@@ -42,9 +42,11 @@ To copy the config file over. In this file you can specify where to store and lo
 
 You will first need to create your key:
 
-`LaraCrypt::generateKey()`
+``` bash
+$ php artisan laracrypt:key
+```
 
-This will generate a key and save it in `storage/keys`.
+This will generate a key and save it in `storage/keys`. You could also generate the key programmatically via the static `generateKey` method.
 
 In the future more options will be added to make key storage more flexible.
 

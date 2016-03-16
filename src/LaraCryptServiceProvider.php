@@ -7,6 +7,20 @@ use Illuminate\Support\ServiceProvider;
 class LaraCryptServiceProvider extends ServiceProvider
 {
     /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+
+    protected $defer = false;
+    /**
+     * The console commands.
+     *
+     * @var bool
+     */
+    protected $commands = 'garethnic\laracrypt\LaraCryptGenerate';
+
+    /**
      * Perform post-registration booting of services.
      *
      * @return void
@@ -25,6 +39,6 @@ class LaraCryptServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->commands($this->commands);
     }
 }
